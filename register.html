@@ -104,7 +104,29 @@
     })('5ba2118f-b462-47f9-66eb-e0eeddbf109d');
     </script>
   </div>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCBHLiOKNZcD4JD7-MTKHnURFIDCbIuhjA",
+    authDomain: "acme-ff0a1.firebaseapp.com",
+    projectId: "acme-ff0a1",
+    storageBucket: "acme-ff0a1.appspot.com",
+    messagingSenderId: "222441194825",
+    appId: "1:222441194825:web:bf1bbe065f71a41fd64698",
+    measurementId: "G-8R2C5XPYMV"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
