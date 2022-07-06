@@ -707,7 +707,29 @@
   <!-- Page level custom scripts -->
   <script src="js/demo/chart-area-demo.js"></script>
   <script src="js/demo/chart-pie-demo.js"></script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCBHLiOKNZcD4JD7-MTKHnURFIDCbIuhjA",
+    authDomain: "acme-ff0a1.firebaseapp.com",
+    projectId: "acme-ff0a1",
+    storageBucket: "acme-ff0a1.appspot.com",
+    messagingSenderId: "222441194825",
+    appId: "1:222441194825:web:2a1c14c06c620bb7d64698",
+    measurementId: "G-B4FD55QTGT"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </body>
 
 </html>
