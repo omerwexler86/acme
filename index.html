@@ -736,8 +736,9 @@
 <script>
 function hasPendoVisitorId() {
   if (pendo?.visitorId) {
-    $('#output').innerHTML = pendo.visitorId
+    document.getElementById('output').innerHTML = pendo.visitorId
   } else {
+        document.getElementById('output').innerHTML = 'Hello stranger'
     setTimeout(hasPendoVisitorId, 1000);
   }
 }
