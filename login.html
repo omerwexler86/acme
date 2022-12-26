@@ -85,14 +85,19 @@
   <script>
   // Declare a global variable
   window.name = "";
-  window.companyName = "";
+  
   // Assign the value of the form input to the global variable
   document.getElementById("exampleInputEmail").addEventListener("change", function() {
-    window.name = this.value});
-  document.getElementById("CompanyName").addEventListener("change", function() {
-    window.companyName = this.value;
+    window.name = this.value
+  
   });
 </script>
+  <script>
+    window.companyName = "";
+    document.getElementById("CompanyName").addEventListener("change", function() {
+    window.companyName = this.value});
+   
+  </script>
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
