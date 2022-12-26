@@ -734,9 +734,15 @@
   const analytics = getAnalytics(app);
 </script>
 <script>
-    pendo.addEventListener('ready', function() {
-    console.log('Pendo is ready');
-  });
+function checkIsPendoReady() {
+  if (window.pendo.isReady()) {
+    console.log("***", pendo.vistorId);
+  } else {
+    console.log("*** pendo is not ready");
+    setTimeout(checkIsPendoReady, 1000);
+  }
+}
+checkIsPendoReady();
 </script>
 </body>
 <script type="module">
