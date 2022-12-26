@@ -43,8 +43,9 @@
                     <div class="form-group">
                       <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Username">
                     </div>
+                    
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                      <input type="text" class="form-control form-control-user" id="CompanyName" placeholder="Company Name">
                     </div>
                     <div class="form-group">
                       <div class="custom-control custom-checkbox small">
@@ -84,10 +85,12 @@
   <script>
   // Declare a global variable
   window.name = "";
-
+  window.CompanyName = "";
   // Assign the value of the form input to the global variable
   document.getElementById("exampleInputEmail").addEventListener("change", function() {
     window.name = this.value;
+  document.getElementById("CompanyName").addEventListener("change", function() {
+    window.CompanyName = this.value;
   });
 </script>
   <!-- Bootstrap core JavaScript-->
