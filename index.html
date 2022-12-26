@@ -734,15 +734,15 @@
   const analytics = getAnalytics(app);
 </script>
 <script>
-function checkIsPendoReady() {
-  if (window.pendo.isReady()) {
-    console.log("***", pendo.vistorId);
+function hasPendoVisitorId() {
+  if (pendo?.vistorId) {
+    console.log("*** Pendo visitor ID", pendo.vistorId);
   } else {
-    console.log("*** pendo is not ready");
-    setTimeout(checkIsPendoReady, 1000);
+    console.log("*** No Pendo visitor ID 😥");
+    setTimeout(hasPendoVisitorId, 1000);
   }
 }
-checkIsPendoReady();
+hasPendoVisitorId();
 </script>
 </body>
 <script type="module">
