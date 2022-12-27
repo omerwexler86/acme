@@ -18,9 +18,9 @@
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
   <script>
-const searchParams = new URLSearchParams(window.location.search);
-const userName = searchParmas.get('userName');
-const comapnyName = searchParmas.get('comapnyName');
+let mySearchParams = new URLSearchParams(window.location.search);
+const userName = mySearchParams.get('userName');
+const comapnyName = mySearchParams.get('comapnyName');
     console.log('*** userName', userName);
     console.log('*** comapnyName', comapnyName);
   </script>
