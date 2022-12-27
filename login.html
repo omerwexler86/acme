@@ -53,9 +53,9 @@
                         <label class="custom-control-label" for="customCheck">Remember Me</label>
                       </div>
                     </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block">
+                    <button class="btn btn-primary btn-user btn-block" onClick="submit">
                       Login
-                    </a>
+                    </button>
                     <hr>
                     <a href="index.html" class="btn btn-google btn-user btn-block">
                       <i class="fab fa-google fa-fw"></i> Login with Google
@@ -84,11 +84,11 @@
   </div>
   <script>
   // Declare a global variable
-  window.name = "";
+  window.userName = "";
   
   // Assign the value of the form input to the global variable
   document.getElementById("exampleInputEmail").addEventListener("change", function() {
-    window.name = this.value
+    window.userName = this.value
   
   });
 </script>
@@ -104,6 +104,11 @@ inputField.addEventListener("change", function() {
 });
     
    
+  </script>
+  <script>
+  function submit () {
+    window.location = 'index.html?userName=' + userName + '&companyName=' + companyName;
+  }
   </script>
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
