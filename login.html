@@ -93,7 +93,15 @@
   });
 </script>
   <script>
-    window.companyName = document.getElementById("companyname").value;
+    window.globalInputValue = '';
+
+// Get the input field
+const inputField = document.getElementById('companyname');
+
+// Assign the value of the input field to the global variable
+inputField.addEventListener('input', function() {
+  window.globalInputValue = inputField.value;
+});
     
    
   </script>
