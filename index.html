@@ -18,6 +18,13 @@
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
   <script>
+const searchParams = new URLSearchParams(window.location.search);
+const userName = searchParmas.get('userName');
+const comapnyName = searchParmas.get('comapnyName');
+    console.log('*** userName', userName);
+    console.log('*** comapnyName', comapnyName);
+  </script>
+  <script>
 (function(apiKey){
     (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
     v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
@@ -29,7 +36,7 @@
         // Please use Strings, Numbers, or Bools for value types.
         pendo.initialize({
             visitor: {
-                id:              window.name   // Required if user is logged in
+                id:              userName   // Required if user is logged in
                 
                 // full_name:    // Recommended if using Pendo Feedback
                 // role:         // Optional
@@ -39,7 +46,7 @@
             },
 
             account: {
-                id:           window.companyName // Required if using Pendo Feedback
+                id:           companyName // Required if using Pendo Feedback
                 // name:         // Optional
                 // is_paying:    // Recommended if using Pendo Feedback
                 // monthly_value:// Recommended if using Pendo Feedback
