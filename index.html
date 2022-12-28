@@ -127,6 +127,19 @@ const plan = mySearchParams.get('plan');
           </div>
         </div>
       </li>
+      <script>
+function getLinkWithQueryParam(){
+  // Get the button element
+  let page = document.getElementById('buttons').innerHTML;
+	let mainUrl = 'https://omerwexler86.github.io/acme/'
+  // Get the current query string
+  const queryString = window.location.search;
+	
+  // Set the button's href attribute to the desired URL, appending the current query string
+  window.location.href = mainUrl+ page + '.html' + queryString
+  console.log(mainUrl+ page + '.html')
+  }
+</script>
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
