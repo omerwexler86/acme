@@ -100,34 +100,15 @@
 
   </div>
   <script>
-  // Declare a global variable
-  window.userName = "";
-  
-  // Assign the value of the form input to the global variable
-  document.getElementById("exampleInputEmail").addEventListener("change", function() {
-    window.userName = this.value
-  
-  });
-</script>
-  <script>
-    window.companyName = '';
-
-// Get the input field
-const inputField = document.getElementById('companyname');
-
-
-// Assign the value of the input field to the global variable
-inputField.addEventListener("change", function() {
-  window.companyName = inputField.value;
-});
-    
-   
-  </script>
-  <script>
   function submitMe () {
-    console.log('*** userName', userName);
-        console.log('*** companyName', companyName);
-    window.location = 'index.html?userName=' + userName + '&companyName=' + companyName + '&age=' + age + '&role=' + role + '&industry=' + industry + '&industry=' + industry + '&country=' + country + '&plan=' + plan;
+    const userName = document.getElementById('exampleInputEmail').value;
+    const companyName = document.getElementById('companyName').value;
+    const age = document.getElementById('age').value;
+    const role = document.getElementById('role').value;
+    const industry = document.getElementById('industry').value;
+    const country = document.getElementById('country').value;
+    const plan = document.getElementById('plan').value;
+    window.location = 'index.html?userName=' + userName + '&companyName=' + companyName + '&age=' + age + '&role=' + role + '&industry=' + industry + '&country=' + country + '&plan=' + plan;
   }
   </script>
   <!-- Bootstrap core JavaScript-->
