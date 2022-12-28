@@ -130,7 +130,8 @@ const plan = mySearchParams.get('plan');
       <script>
 function getLinkWithQueryParam(name){
   // Get the button element
-  let page = document.getElementById(name).innerHTML;
+  let rawPage = document.getElementById(name).innerHTML;
+  let page = rawPage.toLowerCase()
 	let mainUrl = 'https://omerwexler86.github.io/acme/'
   // Get the current query string
   let queryString = window.location.search;
