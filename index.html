@@ -91,7 +91,7 @@ const plan = mySearchParams.get('plan');
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" id="acme" onclick = "getQueryFromUrl2('acme')">Dashboard</a>                                 
+        <a class="nav-link" id="acme" onclick = "getQueryFromUrl2()">Dashboard</a>                                 
           
       </li>
 
@@ -141,12 +141,12 @@ function getLinkWithQueryParam(name){
   }
 </script>
 	    <script>
-function getQueryFromUrl2(name){
-var idAsString = document.getElementById(name).id
+function getQueryFromUrl2(){
+
 let mainUrl = 'https://omerwexler86.github.io/acme/'
   // Get the current query string
   let queryString = window.location.search;
- window.location.href = mainUrl+ idAsString + '.html' + queryString
+ window.location.href = mainUrl + '.html' + queryString
 }
 
 </script>
