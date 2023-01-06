@@ -17,6 +17,46 @@
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
+<script>
+(function(apiKey){
+    (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
+    v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
+        o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+        y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+
+        // Call this whenever information about your visitors becomes available
+        // Please use Strings, Numbers, or Bools for value types.
+        pendo.initialize({
+            visitor: {
+                id:              userName, // Required if user is logged in
+                age:              age,
+                role:             role,
+                country:          country
+                // full_name:    // Recommended if using Pendo Feedback
+                // role:         // Optional
+
+                // You can add any additional visitor level key-values here,
+                // as long as it's not one of the above reserved names.
+            },
+
+            account: {
+                id:           companyName,
+                industry:      industry,
+                plan:           plan
+                // name:         // Optional
+                // is_paying:    // Recommended if using Pendo Feedback
+                // monthly_value:// Recommended if using Pendo Feedback
+                // planLevel:    // Optional
+                // planPrice:    // Optional
+                // creationDate: // Optional
+
+                // You can add any additional account level key-values here,
+                // as long as it's not one of the above reserved names.
+            }
+        });
+})('a3233ba4-fc51-43a4-664d-27b987f0ce17');
+</script>
 
 </head>
 
@@ -40,10 +80,9 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
+      <li class="nav-item active">
+        <a class="nav-link" id="acme" onclick = "getQueryFromUrl2()">Dashboard</a>                                 
+          
       </li>
 
       <!-- Divider -->
@@ -53,7 +92,16 @@
       <div class="sidebar-heading">
         Interface
       </div>
+      <script>
+  // Get the button element
+  const button = document.getElementById('buttons');
 
+  // Get the current query string
+  const queryString = window.location.search;
+
+  // Set the button's href attribute to the desired URL, appending the current query string
+  button.href = '/page.html' + queryString;
+</script>
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
@@ -63,25 +111,49 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
+            <a class="collapse-item" id="buttons" onclick = "getLinkWithQueryParam('buttons')">Buttons</a>
+            <a class="collapse-item" id='cards' onclick = "getLinkWithQueryParam('cards')">Cards</a>
           </div>
         </div>
       </li>
+      <script>
+function getLinkWithQueryParam(name){
+  // Get the button element
+  let rawPage = document.getElementById(name).innerHTML;
+  let page = rawPage.toLowerCase()
+	let mainUrl = 'https://omerwexler86.github.io/acme/'
+  // Get the current query string
+  let queryString = window.location.search;
+	
+  // Set the button's href attribute to the desired URL, appending the current query string
+  window.location.href = mainUrl+ page + '.html' + queryString
+  console.log(mainUrl+ page + '.html' + queryString )
+  }
+</script>
+	    <script>
+function getQueryFromUrl2(){
+
+let mainUrl = 'https://omerwexler86.github.io/acme/index'
+  // Get the current query string
+  let queryString = window.location.search;
+ window.location.href = mainUrl + '.html' + queryString
+}
+
+</script>
 
       <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item active">
-        <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+      <li class="nav-item">
+        <a class="nav-link collapsed"  data-toggle="collapse" onclick = "getLinkWithQueryParam('utilities')" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
           <span>Utilities</span>
         </a>
-        <div id="collapseUtilities" class="collapse show" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="utilities-color.html">Colors</a>
-            <a class="collapse-item" href="utilities-border.html">Borders</a>
-            <a class="collapse-item" href="utilities-animation.html">Animations</a>
-            <a class="collapse-item active" href="utilities-other.html">Other</a>
+            <a class="collapse-item" id='color' onclick = "getLinkWithQueryParam('color')">utilities-color</a>
+            <a class="collapse-item" id='borders' onclick = "getLinkWithQueryParam('borders')">utilities-border</a>
+            <a class="collapse-item" id='animations' onclick = "getLinkWithQueryParam('animations')">utilities-animation</a>
+            <a class="collapse-item" id='other' onclick = "getLinkWithQueryParam('other')">utilities-other</a>
           </div>
         </div>
       </li>
@@ -103,29 +175,28 @@
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+           <a class="collapse-item" id="login" onclick="getLinkWithQueryParam('login')">Login</a>
+            <a class="collapse-item" id="register" onclick="getLinkWithQueryParam('register')">Register</a>
+           
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">Other Pages:</h6>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
+            
+            
           </div>
         </div>
       </li>
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" onclick="getLinkWithQueryParam('charts')">
           <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
+          <span id="charts">Charts</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Tables</span></a>
+        <a class="nav-link" id="tables" onclick="getLinkWithQueryParam('tables')">Tables</a>          
+
       </li>
 
       <!-- Divider -->
