@@ -17,6 +17,16 @@
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
+	<script>
+let mySearchParams = new URLSearchParams(window.location.search);
+const userName = mySearchParams.get('userName');
+const companyName = mySearchParams.get('companyName');
+const age = mySearchParams.get('age');
+const role = mySearchParams.get('role');
+const industry = mySearchParams.get('industry');
+const country = mySearchParams.get('country');
+const plan = mySearchParams.get('plan');
+  </script>
  <script>
     (function(apiKey){
     (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
