@@ -20,7 +20,7 @@
 	<script>
 let mySearchParams = new URLSearchParams(window.location.search);
 const userName = mySearchParams.get('userName');
-const companyName = mySearchParams.get('companyName');
+const companyName = mySearchParams.get('companyName'); 
 const age = mySearchParams.get('age');
 const role = mySearchParams.get('role');
 const industry = mySearchParams.get('industry');
@@ -37,12 +37,12 @@ const plan = mySearchParams.get('plan');
 
         // Call this whenever information about your visitors becomes available
         // Please use Strings, Numbers, or Bools for value types.
-        pendo.initialize({
+       pendo.initialize({
             visitor: {
-                id:              userName, // Required if user is logged in
-                age:              age,
-                role:             role,
-                country:          country
+                id:              234234, // Required if user is logged in
+                age:              34,
+                role:             "admin",
+                country:          "israel"
                 // full_name:    // Recommended if using Pendo Feedback
                 // role:         // Optional
 
@@ -51,9 +51,9 @@ const plan = mySearchParams.get('plan');
             },
 
             account: {
-                id:           companyName,
-                industry:      industry,
-                plan:           plan
+                id:           234234,
+                industry:      "cars",
+                plan:           "basic"
                 // name:         // Optional
                 // is_paying:    // Recommended if using Pendo Feedback
                 // monthly_value:// Recommended if using Pendo Feedback
