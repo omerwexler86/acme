@@ -744,10 +744,7 @@ let mainUrl = 'https://omerwexler86.github.io/acme/index'
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script>
-  var profileName = pendo.visitorId;
-  document.getElementById("output").innerHTML = profileName;
-</script>
+  
   <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
@@ -783,17 +780,7 @@ let mainUrl = 'https://omerwexler86.github.io/acme/index'
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 </script>
-<script>
-function hasPendoVisitorId() {
-  if (pendo?.visitorId) {
-    document.getElementById('output').innerHTML = pendo.visitorId
-  } else {
-        document.getElementById('output').innerHTML = 'Hello stranger'
-    setTimeout(hasPendoVisitorId, 1000);
-  }
-}
-hasPendoVisitorId();
-</script>
+
 </body>
 <script type="module">
   // Import the functions you need from the SDKs you need
