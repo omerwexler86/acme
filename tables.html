@@ -42,10 +42,10 @@ const plan = mySearchParams.get('plan');
         // Please use Strings, Numbers, or Bools for value types.
         pendo.initialize({
             visitor: {
-                id:              userName, // Required if user is logged in
-                age:              age,
-                role:             role,
-                country:          country
+                id:              "omer1234", // Required if user is logged in
+                age:              12,
+                role:             "role",
+                country:          "UK"
                 // full_name:    // Recommended if using Pendo Feedback
                 // role:         // Optional
 
@@ -54,9 +54,9 @@ const plan = mySearchParams.get('plan');
             },
 
             account: {
-                id:           companyName,
-                industry:      industry,
-                plan:           plan
+                id:           "acme",
+                industry:      "tech",
+                plan:           "basic"
                 // name:         // Optional
                 // is_paying:    // Recommended if using Pendo Feedback
                 // monthly_value:// Recommended if using Pendo Feedback
