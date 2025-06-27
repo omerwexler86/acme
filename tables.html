@@ -909,7 +909,16 @@ let mainUrl = 'https://omerwexler86.github.io/acme/index'
 
       </div>
       <!-- End of Main Content -->
+	<h2>Contact Form</h2>
+  <form action="/submit" method="post">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
 
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
